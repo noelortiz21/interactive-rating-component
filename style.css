@@ -1,0 +1,265 @@
+:root{
+    --orange: hsl(25, 96%, 53%);
+    --white: hsl(0, 0%, 100%);
+--lightgrey: hsl(217, 12%, 63%);
+--mediumgrey: hsl(216, 12%, 54%);
+--darkblue: hsl(213, 19%, 18%);
+--verydarkblue: hsl(216, 12%, 8%);
+--darkbluetransparent: hsla(213, 19%, 18%, 0.6);
+--black-gradient: hsl(216, 12%, 8%);
+/* --verydarkbluetransparent: hsla(216, 12%, 8%, 0.); */
+
+
+--fs-desktop: .9375rem;
+--fs-desktop-title: 1.75rem;
+--fs-mobile: .875rem;
+--fs-mobile-title:1.5rem;
+--fw-400: 400;
+--fw-700: 700;
+--font-family: 'Overpass', sans-serif;
+
+--card-gap-mobile: 1.81rem;
+--card-gap-desktop: 2.25rem;
+--padding-mobile-tycard: 2.12rem 1.5rem 2.31rem;
+--padding-desktop-tycard: 2.81rem 2.5rem 2.81rem 2rem;
+}
+
+/* Reset */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+    body{
+    width: 100%;
+    height: 100vh;
+    background: var(--verydarkblue);
+    font-family:var(--font-family);
+    color: var(--lightgrey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  h1,h2{
+    font-weight: var(--fw-700);
+    font-family: var(--fs-mobile-title);
+    color: var(--white);
+  }
+  /* styles for how did we do section */
+  .form-wrapper{
+    width: 20.4375rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--card-gap-mobile);
+    border-radius: 0.9375rem;
+background:radial-gradient(98.96% 98.96% at 50.00% 0%, #232A34 0%, #181E27 100%);
+    padding: 1.5rem 1.5rem 2rem 1.5rem;
+    gap: 1.5rem;
+  }
+  .form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .form__title{
+    font-size: var(--fs-mobile-title);
+    margin-bottom: -.88rem;
+  }
+  .form>p{
+    line-height: 1.375rem;
+    font-size: var(--fs-mobile);
+}
+  .star-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--darkblue);
+    border-radius: 50%;
+    margin-bottom: -.5rem;
+
+  }
+  .star{
+    width:1rem;
+    height:1rem;
+    object-fit: contain;
+  }
+  .nums-wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+  /* styles for radio button section */
+
+  /* remove default radio buttons */
+  fieldset{
+    border: none;
+  }
+  input[type="radio"] {
+    display: none;
+  }
+  label{
+    background: var(--darkblue);
+    display: block;
+    width: 3.1875rem;
+    height: 3.1875rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  label>span{
+    font-size: 1rem;
+    font-weight: var(--fw-700);
+    line-height: 1.5rem;
+    letter-spacing:.0125rem;
+  }
+
+  .btn{
+    background: var(--orange);
+    border-radius: 100vw;
+    border: none;
+    color: var(--white);
+    font-weight:var(--fw-700);
+    padding: .75rem 6.76rem;
+
+  }
+
+  /* styles for ty section */
+  .tycard{
+    width: 20.4375rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--card-gap-mobile);
+    border-radius: 0.9375rem;
+background: radial-gradient(98.96% 98.96% at 50.00% 0%, #232A34 0%, #181E27 100%);
+    padding:var(--padding-mobile-tycard)
+
+  }
+
+  .tycard__rating-wrapper{
+    color: var(--orange);
+    /* border-radius: 100vw; */
+    background: var(--darkblue);
+    padding: .31rem .75rem;
+    font-size: .875rem;
+        line-height: 1.375rem;
+        border-radius: 1.40625rem;
+  }
+  .tysection{
+    line-height: 1.375rem;
+  }
+  .tysection__title{
+    font-size:1.5rem;
+    line-height: 1.875rem;
+    font-weight: var(--fw-700);
+    margin-bottom: .63rem;
+  }
+  .tysection__text{
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+
+
+  /* desktop media query */
+  @media(min-width:1440px){
+    .tycard{
+        width: 25.75rem;
+        border-radius: 1.875rem;
+        gap: var(--card-gap-desktop);
+        padding: var(--padding-desktop-tycard);
+        border-radius: 1.875rem;
+background: radial-gradient(98.96% 98.96% at 50.00% 0%, #232A34 0%, #181E27 100%);
+    }
+    .tycard__rating-wrapper{
+        padding: .25rem 1.22rem;
+        font-size: .9375rem;
+        line-height: 1.5rem;
+
+
+    }
+    .tysection__title{
+        font-size: 1.75rem;
+        line-height: 2.188rem;
+    }
+    .tysection__text{
+        font-size: .9375rem;
+        line-height: 1.5rem;
+    }   
+    /* media queries how did we do? */
+    .form-wrapper{
+        width: 25.75rem;
+        border-radius: 1.875rem;
+        gap: var(--card-gap-desktop);
+        padding: 2rem 2.44rem 2rem 2rem;
+        border-radius: 1.875rem;
+
+  }
+  .form{
+    gap: 2rem;
+  }
+  .form__title{
+    margin-bottom: 0;
+   
+  }
+  .form>p{
+    margin-top: -1.66rem;
+    margin-bottom: -.5rem;
+  }
+  .star-wrapper{
+    margin-bottom: -.13rem;
+  }
+}
+.hidden{
+    display: none;
+}
+
+.num{
+    appearance: none;
+}
