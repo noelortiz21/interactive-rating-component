@@ -4,7 +4,7 @@ const tycard_wrapper = document.querySelector('.hidden');
 const userRatingChosen = document.querySelector('.userRatingChosen');
 const radioLabels = document.querySelectorAll('.num');
 
-form.addEventListener('submit', e => {
+form.addEventListener('submit',e => {
     e.preventDefault();
     formwrapper.classList.add('hidden');
     tycard_wrapper.classList.remove('hidden'); 

@@ -152,6 +152,7 @@ background:radial-gradient(98.96% 98.96% at 50.00% 0%, #232A34 0%, #181E27 100%)
     justify-content: center;
     align-items: center;
   }
+  
   label>span{
     font-size: 1rem;
     font-weight: var(--fw-700);
